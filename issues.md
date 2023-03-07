@@ -23,4 +23,4 @@ Need to see how to actually run cuda code in this env
 
 #### possible fix
 use module deeplearning. problem - its not compatible with module conda. we would lose our venv
-
+load module cuda toolkit
