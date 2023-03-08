@@ -1,4 +1,4 @@
-#### Some common issues
+## Some common issues
 1. The project requires tensorflow v1, which is very much outdated. Recommend rewrite to upgrade to tf 2
 1. If you need to run it regardless make sure python version is 3.6 or 3.7, can use conda to create a new venv with python=3.7
 1. Try to install requirements one by one trhough conda in a new venv instead of pip'ing the requirements.txt
@@ -7,7 +7,7 @@
 1. setup_all.sh runs without any issues - can proceed further
 1. Lot of depricated warnings. Would be better in the long run to make changes
 
-#### Final result
+## Final result
 `2023-03-06 19:11:44.027994: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Could not dlopen library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /N/soft/rhel7/intel/19.5/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64:/N/soft/rhel7/intel/19.5/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64:/N/soft/rhel7/intel/19.5/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin:/N/soft/rhel7/intel/19.5/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin:/N/soft/rhel7/intel/19.5/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.7:/N/soft/rhel7/intel/19.5/debugger_2019/iga/lib:/N/soft/rhel7/intel/19.5/debugger_2019/libipt/intel64/lib:/N/soft/rhel7/intel/19.5/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin:/N/soft/rhel7/gcc/12.1.0/lib64:/N/soft/rhel7/gcc/12.1.0/lib:/N/soft/rhel7/gcc/infrastructure/lib`
 `2023-03-06 19:11:44.037693: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: UNKNOWN ERROR (303)`
 `2023-03-06 19:11:44.037752: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (h1.carbonate.uits.iu.edu): /proc/driver/nvidia/version does not exist`
@@ -21,3 +21,6 @@
 
 Need to see how to actually run cuda code in this env
 
+#### possible fix
+use module deeplearning. problem - its not compatible with module conda. we would lose our venv
+load module cuda toolkit
